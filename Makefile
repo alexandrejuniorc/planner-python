@@ -3,3 +3,6 @@
 
 dev/start:
 	python3 run.py
+
+dev/test:
+	pytest -s -v $(args)
