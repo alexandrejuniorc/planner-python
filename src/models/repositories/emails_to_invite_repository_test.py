@@ -6,6 +6,7 @@ from .emails_to_invite_repository import EmailsToInviteRepository
 
 db_connection_handler.connect()
 trip_id = str(uuid.uuid4())
+email_id = str(uuid.uuid4())
 email = "johndoe@mail.com"
 
 
@@ -17,7 +18,7 @@ def test_register_email():
     emails_to_invite_repository = EmailsToInviteRepository(connection)
 
     emails_to_invite_repository.register_email(
-        {"id": str(uuid.uuid4()), "trip_id": trip_id, "email": email}
+        {"id": email_id, "trip_id": trip_id, "email": email}
     )
 
 
